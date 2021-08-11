@@ -1,7 +1,6 @@
 for(var i=0; i<document.querySelectorAll(".drum").length; i++)
 {
-  document.querySelectorAll(".drum")[i].addEventListener("click" , handleClick);//not added parenthesis in handleclick as then it would have called the function immediately.
-  function handleClick()
+  document.querySelectorAll(".drum")[i].addEventListener("click" ,   function()
   {
     var buttonInnerHtml = this.innerHtml;
     switch (buttonInnerHtml) {
@@ -43,11 +42,19 @@ for(var i=0; i<document.querySelectorAll(".drum").length; i++)
       default: console.log(buttonInnerHtml);
 
     }
-    addEventListener("keypress",function()
-{alert("key was pressed");}
+    document.addEventListener("keypress",function()
+{
+  alert("key was pressed");
+}
 );
     ////this.style.color="white";
     //
     // alert("I got clicked")
   }
+);
+function makeSound(key)
+{
+
+}
+
 }
