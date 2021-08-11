@@ -41,7 +41,11 @@ function play() {
     default:
       console.log(buttonInnerhtml);
   }
-  //     document.addEventListener('keypress', function () {
+  function keypressed()
+  {
+    alert("Key was pressed");
+  }
+document.addEventListener("keypress",keypressed);
   //       alert('key was pressed')
   //     })
 
