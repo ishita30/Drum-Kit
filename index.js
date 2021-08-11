@@ -1,8 +1,22 @@
+for (var i = 0; i < document.querySelectorAll('.drum').length; i++)
+{
+  document.querySelectorAll('.drum')[i].addEventListener('click', play);
+
+}
+document.addEventListener("keypress",keypressed);
 function play() {
   var buttonInnerhtml = this.innerHTML;
-  // console.log(buttonInnerHtml)
-  // console.log(this.innerHTML)
-  switch (buttonInnerhtml) {
+  charactercheck(buttonInnerhtml);
+}
+
+function keypressed(event)
+{
+    charactercheck(event.key);
+}
+
+function charactercheck(key)
+{
+  switch (key) {
     case 'w':
       var crash = new Audio('sounds/crash.mp3');
       crash.play();
@@ -41,21 +55,5 @@ function play() {
     default:
       console.log(buttonInnerhtml);
   }
-  function keypressed()
-  {
-    alert("Key was pressed");
-  }
-document.addEventListener("keypress",keypressed);
-  //       alert('key was pressed')
-  //     })
 
-  //   })
-  // }
-
-  // const check = () => {
-  //   console.log('Hi')
-}
-
-for (var i = 0; i < document.querySelectorAll('.drum').length; i++) {
-  document.querySelectorAll('.drum')[i].addEventListener('click', play);
 }
