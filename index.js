@@ -60,7 +60,8 @@ function charactercheck(key)
   }
 
 }
-function buttonAnimation()
+function buttonAnimation(currentKey)
 {
-
+  var activeButton=document.querySelector('.' + currentKey);
+  activeButton.classList.add("pressed");
 }
