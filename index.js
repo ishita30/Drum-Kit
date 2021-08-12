@@ -2,16 +2,19 @@ for (var i = 0; i < document.querySelectorAll('.drum').length; i++)
 {
   document.querySelectorAll('.drum')[i].addEventListener('click', play);
 
+
 }
 document.addEventListener("keypress",keypressed);
 function play() {
   var buttonInnerhtml = this.innerHTML;
   charactercheck(buttonInnerhtml);
+  buttonAnimation(buttonInnerhtml);
 }
 
 function keypressed(event)
 {
     charactercheck(event.key);
+    buttonAnimation(event.key);
 }
 
 function charactercheck(key)
@@ -55,5 +58,9 @@ function charactercheck(key)
     default:
       console.log(buttonInnerhtml);
   }
+
+}
+function buttonAnimation()
+{
 
 }
