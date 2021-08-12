@@ -60,8 +60,14 @@ function charactercheck(key)
   }
 
 }
+  var activeButton;
 function buttonAnimation(currentKey)
 {
-  var activeButton=document.querySelector('.' + currentKey);
+activeButton=document.querySelector('.' + currentKey);
   activeButton.classList.add("pressed");
+  setTimeout(animation , 100);//time is in miliseconds
+}
+function animation()
+{
+  activeButton.classList.remove("pressed");
 }
